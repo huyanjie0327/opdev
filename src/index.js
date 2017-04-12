@@ -23,9 +23,6 @@ new Vue({
             if (!this.$cookie.get('account')) {
                 this.$router.push('/login')
             }            
-            else {
-                this.$router.push('/menu/')
-            }
         }
     }
 })

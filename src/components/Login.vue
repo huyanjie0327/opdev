@@ -22,7 +22,7 @@
                 }
             },
             login() {
-                this.$cookie.set('account', this.account, {expires: '30s'})
+                this.$cookie.set('account', this.account, {expires: '2h'})
                 this.$router.push('/menu/')
             }
         }
