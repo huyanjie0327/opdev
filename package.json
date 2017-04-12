@@ -25,6 +25,7 @@
     "css-loader": "^0.28.0",
     "style-loader": "^0.16.1",
     "vue": "^2.2.6",
+    "vue-cookie": "^1.1.4",
     "vue-hot-reload-api": "^2.0.11",
     "vue-loader": "^11.3.4",
     "vue-router": "^2.4.0",

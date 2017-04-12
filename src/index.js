@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import App from './components/App.vue'
-import {getCookie, setCookie} from './cookie.js'
 import router from './routers.js'
+import VueCookie from 'vue-cookie'
 
-Vue.prototype.getCookie = getCookie
-Vue.prototype.setCookie = setCookie
+Vue.use(VueCookie)
 
 new Vue({
     el: '#app',
@@ -12,19 +11,20 @@ new Vue({
     components: {
         app: App,
     },
+    watch: {
+        "$route": 'checkLogin'
+    },
     created() {
         this.checkLogin();
     },
     methods: {
         checkLogin() {
-            console.log("checkLogin")
             // 检查是否存在session
-            if (!this.getCookie('session')) {
-                console.log("log in page")
+            if (!this.$cookie.get('account')) {
                 this.$router.push('/login')
             }            
             else {
-                this.$router.push('/menu')
+                this.$router.push('/menu/')
             }
         }
     }
