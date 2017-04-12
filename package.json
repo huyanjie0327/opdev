@@ -27,6 +27,7 @@
     "vue": "^2.2.6",
     "vue-hot-reload-api": "^2.0.11",
     "vue-loader": "^11.3.4",
+    "vue-router": "^2.4.0",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"

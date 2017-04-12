@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <h1>Hello</h1>
-        Index Page
-    </div>
+    <router-view></router-view>
 </template>
 <script>
 </script>

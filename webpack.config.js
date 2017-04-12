@@ -29,7 +29,6 @@ module.exports = {
     devServer: {
         inline: true,
         hot: false,
-        grogress: true,
-        historyApiFallback: true,
+        //historyApiFallback: true,
     }
 }
