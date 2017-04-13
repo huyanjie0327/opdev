@@ -1,9 +1,14 @@
 import Vue from 'vue'
-import App from './components/App.vue'
-import router from './routers.js'
 import VueCookie from 'vue-cookie'
 
+import router from './routers.js'
+import App from './components/App.vue'
+import http from './http.js'
+
+
 Vue.use(VueCookie)
+
+Vue.prototype.$http = http
 
 new Vue({
     el: '#app',
@@ -20,8 +25,8 @@ new Vue({
     methods: {
         checkLogin() {
             // 检查是否存在session
-            if (!this.$cookie.get('account')) {
-                this.$router.push('/login')
+            if (!this.$cookie.get('username')) {
+                this.$router.push('/login/')
             }            
         }
     }
